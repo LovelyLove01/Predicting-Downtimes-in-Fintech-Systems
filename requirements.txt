@@ -1,5 +1,5 @@
-streamlit
+dash
 pandas
-numpy
-plotly
 scikit-learn
+plotly
+gunicorn

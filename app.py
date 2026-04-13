@@ -45,7 +45,7 @@ fig_forecast.add_hline(y=90, line_dash="dot", line_color="orange", annotation_te
 st.plotly_chart(fig_forecast, use_container_width=True)
 
 # LOG ANALYSIS & ANOMALIES
-st.subheader("🔍 Automated Incident & Log Correlation")
+st.subheader("Automated Incident & Log Correlation")
 left_col, right_col = st.columns(2)
 
 with left_col:

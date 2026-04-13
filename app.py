@@ -7,12 +7,12 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import IsolationForest
 
-# --- 1. DATA & AI ENGINE ---
+# DATA & AI ENGINE
 def load_and_process_data():
     df = pd.read_csv('merged_observability_data.csv')
     df['timestamp'] = pd.to_datetime(df['timestamp'])
     
-    # Run Isolation Forest Anomaly Detection
+    # Isolation Forest Anomaly Detection
     features = ['mem_usage', 'cpu_usage', 'response_time_ms']
     model = IsolationForest(contamination=0.05, random_state=42)
     df['anomaly_signal'] = model.fit_predict(df[features])
@@ -21,14 +21,15 @@ def load_and_process_data():
 
 df = load_and_process_data()
 
-# --- 2. INITIALIZE DASH APP ---
+# INITIALIZE DASH APP
 app = dash.Dash(__name__)
-app.title = "Nathan Claire AI-Ops"
+server = app.server
+app.title = "SmartDetect AI-Ops"
 
-# --- 3. APP LAYOUT ---
+# APP LAYOUT
 app.layout = html.Div(style={'backgroundColor': '#111111', 'color': 'white', 'fontFamily': 'sans-serif', 'padding': '20px'}, children=[
     
-    html.H1("🚀 Nathan Claire Africa: AI-Ops Dash", style={'textAlign': 'center', 'color': '#00D4FF'}),
+    html.H1("SmartDetect: AI-Ops Dash", style={'textAlign': 'center', 'color': '#00D4FF'}),
     html.Hr(style={'borderColor': '#333'}),
 
     # TOP ROW: Metric Cards

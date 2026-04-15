@@ -28,8 +28,12 @@ By correlating Infrastructure Metrics (CPU/Memory), Real User Monitoring (RUM) d
 # Project Structure
 
 ├── app.py                                     # Main Plotly Dash application & UI
+
 ├── DowntimeModel_in_Fintechs.ipnb             # Shared AI logic: ML models and data processing
+
 ├── requirements.txt                           # Project dependencies for cloud deployment
+
 ├── merged_observability_data.csv              # Synthetic industry-standard monitoring datasets
+
 └── README.md                                  # Project documentation
 
